@@ -1,0 +1,5 @@
+severity,priority_rank,ack_deadline_seconds,escalation_after_seconds,effective_from,effective_to
+CRITICAL,1,120,300,2025-01-01,
+HIGH,2,600,1800,2025-01-01,
+LOW,4,7200,14400,2025-01-01,
+MEDIUM,3,1800,5400,2025-01-01,

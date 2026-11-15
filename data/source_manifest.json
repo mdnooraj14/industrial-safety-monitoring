@@ -1,0 +1,310 @@
+{
+ "title": "Industrial Safety Monitoring - synthetic data source manifest",
+ "generator": {
+  "version": "1.0.0",
+  "seed": 20261022,
+  "entry_point": "data_generator/generate.py",
+  "python": "3.11.6"
+ },
+ "provenance": {
+  "external_data_used": false,
+  "web_retrieval": false,
+  "personal_data": false,
+  "confidential_data": false
+ },
+ "window": {
+  "start": "2026-10-01T00:00:00+00:00",
+  "days": 30,
+  "end": "2026-10-31T00:00:00+00:00"
+ },
+ "scales": {
+  "full": {
+   "n_plants": 4,
+   "n_machines": 60,
+   "n_alarm_defs": 200,
+   "n_alarm_events": 50000,
+   "days": 30
+  },
+  "starter": {
+   "n_plants": 2,
+   "n_machines": 8,
+   "n_alarm_defs": 40,
+   "n_alarm_events": 2000,
+   "days": 7
+  }
+ },
+ "libraries": [
+  {
+   "name": "Faker",
+   "version": "40.54.0",
+   "license": "MIT License"
+  },
+  {
+   "name": "numpy",
+   "version": "2.4.6",
+   "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+  },
+  {
+   "name": "pandas",
+   "version": "3.1.1",
+   "license": "BSD-3-Clause"
+  },
+  {
+   "name": "SQLAlchemy",
+   "version": "2.0.57",
+   "license": "MIT"
+  },
+  {
+   "name": "alembic",
+   "version": "1.20.1",
+   "license": "MIT"
+  },
+  {
+   "name": "psycopg",
+   "version": "3.3.9",
+   "license": "LGPL-3.0-only"
+  },
+  {
+   "name": "fastapi",
+   "version": "0.163.0",
+   "license": "MIT"
+  },
+  {
+   "name": "pydantic",
+   "version": "2.14.3",
+   "license": "MIT"
+  },
+  {
+   "name": "streamlit",
+   "version": "1.67.0",
+   "license": "Apache-2.0"
+  },
+  {
+   "name": "plotly",
+   "version": "7.1.0",
+   "license": "MIT"
+  },
+  {
+   "name": "requests",
+   "version": "2.34.2",
+   "license": "Apache-2.0"
+  },
+  {
+   "name": "pytest",
+   "version": "9.2.0",
+   "license": "MIT"
+  }
+ ],
+ "datasets": [
+  {
+   "label": "full: baseline + injected anomalies",
+   "path": "data/exports/full",
+   "files": 39,
+   "bytes": 139218937,
+   "manifest_digest": "e9dc6a16ce16d81b586e75be63ae61f47ff9a963b0cab24ea1512b24f60c4212",
+   "checksums": {
+    "csv/acknowledgement.csv": "e245b9282d91acf3b2bd820bb5b1e276bca1a7f430330a18acf16e95f728bfe6",
+    "csv/alarm_definition.csv": "bed0e86928234b0216b6dd281577c6d2bf15c030aa965114d8f764f666e12361",
+    "csv/alarm_event.csv": "ba9dc98c51b47723e51cb2eaa367830645cac4765eb23cc6a925ee3f0e9503c8",
+    "csv/alarm_severity_policy.csv": "2ee13fb1fc41d3f873301a1893e0bdd1dcbca4a45ad64f39429f877225861299",
+    "csv/corrective_action.csv": "13fefbbaa0265cdec3549e8aa7f47030ff5ede4f79bc4652db249503dd1f101c",
+    "csv/corrective_action_status_event.csv": "4605158013134adfbefb05daa5b4dd19cc200a366071efb8a7f27db4634aeb49",
+    "csv/incident.csv": "7ac0aa36fe0c54ff02b77fd43bc6c295b8ffbf6b8dab3614a2d326047cca5b88",
+    "csv/incident_alarm_link.csv": "7259803bf0292effb67ca9b57776274aef24d73f74152a88122689ca5d55031f",
+    "csv/incident_status_event.csv": "fbebda386775e668d7c908364ea102e5548116bf8affaf801eb5f00fa9f65da5",
+    "csv/interlock.csv": "94120be21c6333fed1853e5f03987818a243b1ba4a86235f39a59ad1d92bd13f",
+    "csv/interlock_state_event.csv": "f55a1ea9c7a3d4c33a526c12d3905e337112045723a27a9e128476f33eb28980",
+    "csv/machine.csv": "aafe5bbd454739bee003e5b82fdcf7f6d5c560dd3476226ba266949604bc8623",
+    "csv/machine_safety_zone.csv": "0734f9b3b34dac0fa0d389ebe86ec8f4a8743368d35426ea93cceaa3d3690303",
+    "csv/machine_state_event.csv": "91b1d914446c8ffd55534bd644737050c7a8e21cf0d9aa8d5e6a48e45c903187",
+    "csv/operator_shift.csv": "b99fcea6994208f1051c9244b68a26507497d8fb66de9d3d45282c1ba31930aa",
+    "csv/plant.csv": "238fa37cf2121d05c6f4ecf4040757fac1b52c20e1f30f94ec97097cb071bc20",
+    "csv/safety_zone.csv": "a9514de346ee5b51e902724bccfa60223422c49a8e8a4c76dc719297c155e4f2",
+    "csv/shift_machine_assignment.csv": "79d04920777709f3ebd320ecf19b1de3bb24d06e8e8027666ff85633f641f8f1",
+    "json/acknowledgement.json": "e9389c949466efdf845589bb895845fc61933ee5ec097dd2cccf655fb0957398",
+    "json/alarm_definition.json": "710f2fd4101a6947866e6f0c2d04d7b1f9534c72ad8bf4f57718c18be81365b4",
+    "json/alarm_event.json": "d8795da4d7520068d1420ef521768d402dabd7add38e26b4d26ec3f567dd4b52",
+    "json/alarm_severity_policy.json": "f48b1bb5d45b84f8cf2818fd971dbf0b18d7b7d76ad7e2bfe54f335a897aa12a",
+    "json/corrective_action.json": "30976751bad119062d8c6efcef10646a5889f4bae3f821dc9d573726c49b4af5",
+    "json/corrective_action_status_event.json": "193b82444cfc64f6f416570ae7f4ae0418f5d90eff4b210499f77337972c79b5",
+    "json/incident.json": "9a050bdb8d9e9fdc060bc2c02e6f52f7123ef54b6d574fd10a14ac35c78ce796",
+    "json/incident_alarm_link.json": "f09f417bef705b5fb8633eda64c99814daeaba7694c53fe0e756f784c8b1c21c",
+    "json/incident_status_event.json": "1de7b7883e63ebef8fd861a6b17808cb2d8b71e2fb50ace9794363822e5e9509",
+    "json/interlock.json": "886adb53cc9250e381a2d2a5d5d31319ffc472f39331d9836a022213ef3c7a0f",
+    "json/interlock_state_event.json": "4a6987222ada5207f621cf1d0540b4582247bff00b6fdaeba2ad880e6a13ff52",
+    "json/machine.json": "468ad8d6130dea7de265520fc783277a6f9890adb38e382cbac8ea465d947a46",
+    "json/machine_safety_zone.json": "7cbb88b23e9e215080584e1ab2567975f2722772a8c7c07eae4fbd538c779a90",
+    "json/machine_state_event.json": "b1198636aabc3d98bdd1ce7d47cbf9583d7aa21ee34c8da57d358e5b9a0835e7",
+    "json/operator_shift.json": "24fe0eb708bd256b589d825ef905b6d9c71e24b39a5cc0bcb448766318cbc586",
+    "json/plant.json": "1b8c2cb23b12dc9b29a9eed9c0c14c9eebd53d9b87f7f0eacffe566f5838d593",
+    "json/safety_zone.json": "da2ae33e343fadbfa75b657614cb02d1e2cd425617ff7d462b5493c93d3ca7d8",
+    "json/shift_machine_assignment.json": "deb96747f4f6ad129cff60ee6ab041462968a1414f28caa747d5e7ce501f1dfe",
+    "row_counts.json": "8323fe02d0418f0626ade05774bebbee6c9abb84eac0e686c9cc9844f764938a",
+    "sql/seed.sql": "5578b8d1154b5ff47c5bf0eea4b87ed96eb427c9d6c79fe7f8e22b982f5c3e30"
+   }
+  },
+  {
+   "label": "full: clean baseline",
+   "path": "data/exports/full_baseline",
+   "files": 39,
+   "bytes": 138922697,
+   "manifest_digest": "de9ab90ccb2be710de6cc88b031e25e17e42fc22ea92dec905e38a50f6508f76",
+   "checksums": {
+    "csv/acknowledgement.csv": "c5f43c731b2bc47b6fb2eb4212c3b92859a6f743b5e3cc2484ba536b5fc03a00",
+    "csv/alarm_definition.csv": "bed0e86928234b0216b6dd281577c6d2bf15c030aa965114d8f764f666e12361",
+    "csv/alarm_event.csv": "2c8ab55ba08e8c404270a734c730d965c627cd028b2f40a23ed17915781a4e8a",
+    "csv/alarm_severity_policy.csv": "2ee13fb1fc41d3f873301a1893e0bdd1dcbca4a45ad64f39429f877225861299",
+    "csv/corrective_action.csv": "eba32ab88d797f04f90f5ed6735d65155ac18a24f201398d1bf5d3fda5f7a451",
+    "csv/corrective_action_status_event.csv": "05f82ef626f2f7f05260fa7aff5bd26340624d5ca701cbf1c61999d47301f61c",
+    "csv/incident.csv": "cfdc9966601a82b00d3a5d4ced1b37d9525a5cace95bb4eaa11e501eded434d9",
+    "csv/incident_alarm_link.csv": "7259803bf0292effb67ca9b57776274aef24d73f74152a88122689ca5d55031f",
+    "csv/incident_status_event.csv": "e7d6589426420f5e5a100b801780d93c269c1e7e0d680a187be9ed29c0e6db19",
+    "csv/interlock.csv": "94120be21c6333fed1853e5f03987818a243b1ba4a86235f39a59ad1d92bd13f",
+    "csv/interlock_state_event.csv": "0b7506fdce601670bcd5a26dd725f532bdb2b51d4958aef6cbf8cd22f52a0481",
+    "csv/machine.csv": "aafe5bbd454739bee003e5b82fdcf7f6d5c560dd3476226ba266949604bc8623",
+    "csv/machine_safety_zone.csv": "0734f9b3b34dac0fa0d389ebe86ec8f4a8743368d35426ea93cceaa3d3690303",
+    "csv/machine_state_event.csv": "73f27de110dafdd942afd4044a2ac60cb5db4f60a90d4aeca076fc20c7bd27a2",
+    "csv/operator_shift.csv": "b99fcea6994208f1051c9244b68a26507497d8fb66de9d3d45282c1ba31930aa",
+    "csv/plant.csv": "238fa37cf2121d05c6f4ecf4040757fac1b52c20e1f30f94ec97097cb071bc20",
+    "csv/safety_zone.csv": "a9514de346ee5b51e902724bccfa60223422c49a8e8a4c76dc719297c155e4f2",
+    "csv/shift_machine_assignment.csv": "79d04920777709f3ebd320ecf19b1de3bb24d06e8e8027666ff85633f641f8f1",
+    "json/acknowledgement.json": "b1ea3fb52e4fbab042ec2bb792587f573ac698838368986b109e10f83b12ad77",
+    "json/alarm_definition.json": "710f2fd4101a6947866e6f0c2d04d7b1f9534c72ad8bf4f57718c18be81365b4",
+    "json/alarm_event.json": "67d7c7b5c4e7a169112273a6691ff2480213026f35c579cd9c35aca83820150e",
+    "json/alarm_severity_policy.json": "f48b1bb5d45b84f8cf2818fd971dbf0b18d7b7d76ad7e2bfe54f335a897aa12a",
+    "json/corrective_action.json": "9372b8926f83d00a9661b736a96ddbbda3a0ff3e02c56f1dcdef2a44955cbf1e",
+    "json/corrective_action_status_event.json": "ed1ce60319dec715f968aea0ed59ab9ad1522be1f5d4ff8a9a8fca75848fbd20",
+    "json/incident.json": "703568c23cd3bf62b4152a93fa81715288302e8de97e3528086df6246004d85c",
+    "json/incident_alarm_link.json": "f09f417bef705b5fb8633eda64c99814daeaba7694c53fe0e756f784c8b1c21c",
+    "json/incident_status_event.json": "8a12ea2eb29fff1cc9d1e6be8a0517058d36e408a582772f2a8fbbe6d4f6a099",
+    "json/interlock.json": "886adb53cc9250e381a2d2a5d5d31319ffc472f39331d9836a022213ef3c7a0f",
+    "json/interlock_state_event.json": "6ccdeae1784eb80977e7d8e545de4121498a88a8137f049edddb87e8dff77eb5",
+    "json/machine.json": "468ad8d6130dea7de265520fc783277a6f9890adb38e382cbac8ea465d947a46",
+    "json/machine_safety_zone.json": "7cbb88b23e9e215080584e1ab2567975f2722772a8c7c07eae4fbd538c779a90",
+    "json/machine_state_event.json": "b3aab21eba4dae78907633979c6778a4d246cd4c23d4c3946c9be1b68981ab5f",
+    "json/operator_shift.json": "24fe0eb708bd256b589d825ef905b6d9c71e24b39a5cc0bcb448766318cbc586",
+    "json/plant.json": "1b8c2cb23b12dc9b29a9eed9c0c14c9eebd53d9b87f7f0eacffe566f5838d593",
+    "json/safety_zone.json": "da2ae33e343fadbfa75b657614cb02d1e2cd425617ff7d462b5493c93d3ca7d8",
+    "json/shift_machine_assignment.json": "deb96747f4f6ad129cff60ee6ab041462968a1414f28caa747d5e7ce501f1dfe",
+    "row_counts.json": "bfaa1e99e78fbc2f2e024d0fa64b8d5ac0748db8d27b3cf88e61ca1ce3245fc3",
+    "sql/seed.sql": "695683fd6153f9ed753dce9be7bc9cad3fdebe64b8aeb521eb8c3a9c3a62b0a9"
+   }
+  },
+  {
+   "label": "full: ground truth",
+   "path": "data/ground_truth/full",
+   "files": 2,
+   "bytes": 943691,
+   "manifest_digest": "",
+   "checksums": {
+    "ground_truth.csv": "f13bb95908191695d715a9645392da7b3396ab6af629dc31814d80d3338c8fb7",
+    "ground_truth.json": "50e363260b88cfe3de74e2740ebecc4272af20757a60b76c6abb8951e2b14ea2"
+   }
+  },
+  {
+   "label": "starter: baseline + injected anomalies",
+   "path": "data/exports/starter",
+   "files": 39,
+   "bytes": 5304723,
+   "manifest_digest": "ca80a0403890f2fc34c92a51b4cdd9c97cbd8546b40c902e1e352252332b7fcd",
+   "checksums": {
+    "csv/acknowledgement.csv": "4ae1a05c50ffc297076092d0e3d03533aeb7f9057a87279c2b28b03fd3ffc918",
+    "csv/alarm_definition.csv": "4f965c089bab53527925bc9835ff31d2e95c28d8882ca9017fa1900fef961dc8",
+    "csv/alarm_event.csv": "7334f58d053842259265b4e1019726bbd36ac170410af9789990705e77b26618",
+    "csv/alarm_severity_policy.csv": "2ee13fb1fc41d3f873301a1893e0bdd1dcbca4a45ad64f39429f877225861299",
+    "csv/corrective_action.csv": "1ca941fd91d8a8126d88a8a865365a3b631e0b574c98a468267f6e70c9663d06",
+    "csv/corrective_action_status_event.csv": "0bf006fbf7a5e17b9214c0b773e73f4d7aa43c864d3ebd287e293122db07b6d1",
+    "csv/incident.csv": "3dec3a25d7be74498fc11de1fd0c02cf4cad45b542280950125e65b4062b2cbd",
+    "csv/incident_alarm_link.csv": "7ab679609104b858b2aa1eca8c27e31b2d44e7ba41847b5185aee4069e6c0ef9",
+    "csv/incident_status_event.csv": "593d9e404c8dba38a8b18be5465ea3b03726cb3fca8342caf3ef06326afd7834",
+    "csv/interlock.csv": "7c3c1b5b08b0c88941e3bc9c136f2d302e15167f03b006e8a7652df50728c90d",
+    "csv/interlock_state_event.csv": "2ff4989c0f9dbf6dcf620855a8f97836be78b0ea0f061ec7b7a0282633e407b7",
+    "csv/machine.csv": "1969d24acce6167d78e08dd2beb199c9976831f79cce30c1527d57589ffd30f1",
+    "csv/machine_safety_zone.csv": "27123d979917060dafd935451c68323554c5c32e3ec2f0ac7ca9cce6a1058357",
+    "csv/machine_state_event.csv": "230831ba6f0c24c0a9b065b24ca6421df2d1282a3daa494e7d1eab92ac061d5d",
+    "csv/operator_shift.csv": "1eb192d1d99c9a04474cfa90651372fddf0d0c5d0af3240340ab08f457f1aea4",
+    "csv/plant.csv": "0d65f5af6c84139ee5656722d979ee618530f1cffbfa78436f752b489ea0b843",
+    "csv/safety_zone.csv": "b910fd2136608639cf62d26ade88cf8af149d1f91504498137d9870dd340b0a4",
+    "csv/shift_machine_assignment.csv": "e603062c41f8af769f9938309a3d3887d1c17b0eef493dbbe4221035c37583c8",
+    "json/acknowledgement.json": "f5f929867cad51f3b72f9bdc3341ac64efff5d61cf1cfe4966d87a12a82b61cf",
+    "json/alarm_definition.json": "e2ef666bcf0b74c63cf22bd8f4fd47a4b2c6ad7a1e34a67a7d992afa11c8251f",
+    "json/alarm_event.json": "946cdc9f95e59656887b29371875dba82126dcb913c9524d41ac3996fc2aabf1",
+    "json/alarm_severity_policy.json": "f48b1bb5d45b84f8cf2818fd971dbf0b18d7b7d76ad7e2bfe54f335a897aa12a",
+    "json/corrective_action.json": "8faa3e36dd8b3180d3bbc9850ffac3fd71c4ce5c5919df4db0c6e04995048156",
+    "json/corrective_action_status_event.json": "598614b68660745e8c1c241e49af39a8a39aba7f8d54292a9e9076d2e94f7fbc",
+    "json/incident.json": "652d629ec84cb7f2a6f603f3bd3b65b58ba7e4af7866c5d2f5528e4243d623d5",
+    "json/incident_alarm_link.json": "158c40fb4738bf59334c3d6797e54d562a423d63011f7c0b79a4255220e8cf24",
+    "json/incident_status_event.json": "8f74f51906d841b2875cc813094ac326231679899dea6ef08940fd1cfe5b3967",
+    "json/interlock.json": "b97ce4444962534f7fe755657c1ab51c92cbed9e7b7a8bec1af3ecb0f076b0e3",
+    "json/interlock_state_event.json": "962cc9a562934bfef983224ea00ac8ae1866768588bb93bb5a39d59755df1992",
+    "json/machine.json": "b6e789abe39c254e85510a75a2589567e9e927acb3bb05bbee740f1541b3acee",
+    "json/machine_safety_zone.json": "9367838adc02c8a6df79170af7a49cd0b461090d6bd8f31d590e3b2e5153300c",
+    "json/machine_state_event.json": "6203ab28a77bf8522345363f63862f7ae820dd83cfd68216d7d2a8fd43371af8",
+    "json/operator_shift.json": "d4f7a785e4f44db81b339a570ebbe6338aec05d1de33111078d97ae7edc369ef",
+    "json/plant.json": "91b3bd0ead6e8136dd62ba722ea4019f330c1bdb615dfe8e8698430c6f8cba5e",
+    "json/safety_zone.json": "1894d0e334b3bbc7e618a155ba6ddc04d7653ec0ae2c545970638adb56516d24",
+    "json/shift_machine_assignment.json": "3e1256ecdca400c782de963ec5718f5cb86cd2e9d4cd88744b19e0b51c5fd842",
+    "row_counts.json": "465090a269561f17a9fd145e5cc16f5e022aa7e9675ee4c6926580b7f9decb16",
+    "sql/seed.sql": "0bae264dd878ad08e47f8174a4a13cb3b7746d27c1d9f2bc8dddc14fa734f60f"
+   }
+  },
+  {
+   "label": "starter: clean baseline",
+   "path": "data/exports/starter_baseline",
+   "files": 39,
+   "bytes": 5252219,
+   "manifest_digest": "1351a94b6ef894b98f3d28a9c415d83d90caa33e5979458440bebec4e7c2e88a",
+   "checksums": {
+    "csv/acknowledgement.csv": "03a6d18f8ce5b13e124379dfc34bd8c936c02a086b00304321d4b8edafdcdc97",
+    "csv/alarm_definition.csv": "4f965c089bab53527925bc9835ff31d2e95c28d8882ca9017fa1900fef961dc8",
+    "csv/alarm_event.csv": "66d8c58539de0b2b32fba0e70b0f12823f9598a4d1ea02d60c6cd167cefc03f7",
+    "csv/alarm_severity_policy.csv": "2ee13fb1fc41d3f873301a1893e0bdd1dcbca4a45ad64f39429f877225861299",
+    "csv/corrective_action.csv": "0becd0c00394d6cd5dc8767e29f82b9ff1c4ffe475fcb781829ee166536e2cdc",
+    "csv/corrective_action_status_event.csv": "a912b168fdfb30ba2e0bb4791e81726bd5d663e1382b3845815761766f427a7f",
+    "csv/incident.csv": "8763d94bdd16ffaa59f80ed44d32219a017ec50308b8688f08eeb1ec361af435",
+    "csv/incident_alarm_link.csv": "7ab679609104b858b2aa1eca8c27e31b2d44e7ba41847b5185aee4069e6c0ef9",
+    "csv/incident_status_event.csv": "ee23158d7b2ad838d76d1b1b8211626a1d8c289550dfa5b5c1dc9a5ffe300b52",
+    "csv/interlock.csv": "7c3c1b5b08b0c88941e3bc9c136f2d302e15167f03b006e8a7652df50728c90d",
+    "csv/interlock_state_event.csv": "7bb0ca29688995ba76461e2596cca2c6bb644a772393f97b8a500ab875dcbb6d",
+    "csv/machine.csv": "1969d24acce6167d78e08dd2beb199c9976831f79cce30c1527d57589ffd30f1",
+    "csv/machine_safety_zone.csv": "27123d979917060dafd935451c68323554c5c32e3ec2f0ac7ca9cce6a1058357",
+    "csv/machine_state_event.csv": "4a44aa3ae7ecd607828b8c2e57b39a492bc51fb8af72f56aa4ffc854b563417b",
+    "csv/operator_shift.csv": "1eb192d1d99c9a04474cfa90651372fddf0d0c5d0af3240340ab08f457f1aea4",
+    "csv/plant.csv": "0d65f5af6c84139ee5656722d979ee618530f1cffbfa78436f752b489ea0b843",
+    "csv/safety_zone.csv": "b910fd2136608639cf62d26ade88cf8af149d1f91504498137d9870dd340b0a4",
+    "csv/shift_machine_assignment.csv": "e603062c41f8af769f9938309a3d3887d1c17b0eef493dbbe4221035c37583c8",
+    "json/acknowledgement.json": "1e3fe3d2173224162090d89bcc8ec1c97a29bd911cd732037309fe8b5c3b63c7",
+    "json/alarm_definition.json": "e2ef666bcf0b74c63cf22bd8f4fd47a4b2c6ad7a1e34a67a7d992afa11c8251f",
+    "json/alarm_event.json": "3085239ff1740e6722a121e0f03cfb1ef8a4aec24a48073f8080323868457537",
+    "json/alarm_severity_policy.json": "f48b1bb5d45b84f8cf2818fd971dbf0b18d7b7d76ad7e2bfe54f335a897aa12a",
+    "json/corrective_action.json": "b55acdfa4c47198d88952fe0bb2daab4459e924068b343bbefd41494adbf4bee",
+    "json/corrective_action_status_event.json": "4df02ca3e015c1bfd736516f437897729a67139a0e8c445f0e6253c23224fb6f",
+    "json/incident.json": "e5f8194516d1274f76530b57e7ccc1b66602e3b8c918098c25a2af70d045ccd9",
+    "json/incident_alarm_link.json": "158c40fb4738bf59334c3d6797e54d562a423d63011f7c0b79a4255220e8cf24",
+    "json/incident_status_event.json": "7a7ce3f8c5795fe2874f3dbc84060a27789a29d58b091a6236638ebe77720182",
+    "json/interlock.json": "b97ce4444962534f7fe755657c1ab51c92cbed9e7b7a8bec1af3ecb0f076b0e3",
+    "json/interlock_state_event.json": "8a9a9e655cb51b0776c640972d4f40303c122cf9c568846f7181f489ee9cd522",
+    "json/machine.json": "b6e789abe39c254e85510a75a2589567e9e927acb3bb05bbee740f1541b3acee",
+    "json/machine_safety_zone.json": "9367838adc02c8a6df79170af7a49cd0b461090d6bd8f31d590e3b2e5153300c",
+    "json/machine_state_event.json": "d434d4a48d462c2f82cdc60bee5c755a3b45e2e7a4d2480684d5a3192a4b5a36",
+    "json/operator_shift.json": "d4f7a785e4f44db81b339a570ebbe6338aec05d1de33111078d97ae7edc369ef",
+    "json/plant.json": "91b3bd0ead6e8136dd62ba722ea4019f330c1bdb615dfe8e8698430c6f8cba5e",
+    "json/safety_zone.json": "1894d0e334b3bbc7e618a155ba6ddc04d7653ec0ae2c545970638adb56516d24",
+    "json/shift_machine_assignment.json": "3e1256ecdca400c782de963ec5718f5cb86cd2e9d4cd88744b19e0b51c5fd842",
+    "row_counts.json": "6e4d66808fd4fb9a54fc6629b6e66f797ef82eb8cce93994412b3baa8e18a67c",
+    "sql/seed.sql": "0ebbfdbcc8e7a716c2eba79389bd3e507dfb0f989fafeefd88bf7ed0fa8725c0"
+   }
+  },
+  {
+   "label": "starter: ground truth",
+   "path": "data/ground_truth/starter",
+   "files": 2,
+   "bytes": 88797,
+   "manifest_digest": "",
+   "checksums": {
+    "ground_truth.csv": "51b5fb1b5ba7a0e55381c173f461eea79b5f48b93e54a6de05874a753ca35546",
+    "ground_truth.json": "c9948b89f4efe1ed7124cf63c61f537ec8f406e3b12dafeaffef13cef0d5b68b"
+   }
+  }
+ ]
+}

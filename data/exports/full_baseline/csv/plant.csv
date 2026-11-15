@@ -1,0 +1,5 @@
+plant_id,plant_name,city,country_code,timezone,industry_type,lifecycle_status,effective_from,effective_to
+P01,Pune Works,Pune,IN,Asia/Kolkata,AUTOMOTIVE,ACTIVE,2025-01-01,
+P02,Stuttgart Plant,Stuttgart,DE,Europe/Berlin,METAL_FABRICATION,ACTIVE,2025-01-01,
+P03,Monterrey Plant,Monterrey,MX,America/Monterrey,FOOD_PROCESSING,ACTIVE,2025-01-01,
+P04,Columbus Plant,Columbus,US,America/New_York,CHEMICAL,ACTIVE,2025-01-01,

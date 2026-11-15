@@ -1,0 +1,20 @@
+{
+  "alarm_severity_policy": 4,
+  "plant": 4,
+  "alarm_definition": 200,
+  "machine": 60,
+  "operator_shift": 730,
+  "safety_zone": 20,
+  "interlock": 211,
+  "machine_safety_zone": 76,
+  "machine_state_event": 73460,
+  "shift_machine_assignment": 5475,
+  "alarm_event": 50000,
+  "incident": 134,
+  "interlock_state_event": 34035,
+  "acknowledgement": 43513,
+  "corrective_action": 207,
+  "incident_alarm_link": 223,
+  "incident_status_event": 612,
+  "corrective_action_status_event": 953
+}
